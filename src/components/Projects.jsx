@@ -6,6 +6,7 @@ const webApps = [
     description: 'A full-featured online store with product catalog, cart system, and checkout flow. Built during my CodeAlpha internship.',
     tech: ['React', 'Node.js', 'MongoDB', 'Express'],
     github: 'https://github.com/edoziecen/CodeAlpha_Ecommerce',
+    demo: 'https://lnkd.in/p/dhwXzRDG', // REPLACE WITH YOUR LINKEDIN POST URL
     label: 'Web App'
   },
   {
@@ -13,6 +14,7 @@ const webApps = [
     description: 'A social networking platform with user profiles, posts, feeds, and real-time interactions. Developed as part of CodeAlpha tasks.',
     tech: ['React', 'Node.js', 'Express', 'MongoDB'],
     github: 'https://github.com/edoziecen/CodeAlpha_SocialMedia',
+    demo: 'https://lnkd.in/p/deDTtuM7', // REPLACE WITH YOUR LINKEDIN POST URL
     label: 'Web App'
   },
   {
@@ -20,6 +22,7 @@ const webApps = [
     description: 'A task management and collaboration tool with boards, task assignment, and progress tracking. Built for CodeAlpha.',
     tech: ['React', 'Node.js', 'Express', 'MongoDB'],
     github: 'https://github.com/edoziecen/CodeAlpha_ProjectManagement',
+    demo: 'https://lnkd.in/p/dTdF7R89', // REPLACE WITH YOUR LINKEDIN POST URL
     label: 'Web App'
   }
 ];
@@ -90,17 +93,32 @@ const Projects = () => {
                   <span className="text-xs font-mono text-neon-green/80 bg-dark-600/50 px-3 py-1 rounded-full">
                     {project.label}
                   </span>
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
-                    aria-label="GitHub Repository"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
+                  <div className="flex space-x-3">
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors"
+                      aria-label="GitHub Repository"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                    </a>
+                    {project.demo && (
+                      <a 
+                        href={project.demo} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-neon-cyan transition-colors"
+                        aria-label="Live Demo or Video"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    )}
+                  </div>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
                 <p className="text-gray-400 mb-6 flex-grow">{project.description}</p>

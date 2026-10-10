@@ -60,7 +60,7 @@ const Contact = () => {
 
           {/* Right Column: Contact Form */}
           <div className="bg-dark-700/30 border border-dark-500/30 rounded-2xl p-8">
-            <form action="mailto:edozieanthony7@gmail.com" method="POST" encType="text/plain" className="space-y-6">
+            <form action="https://formspree.io/f/mvkzrzqy" method="POST" className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Name</label>
                 <input 
